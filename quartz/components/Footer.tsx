@@ -13,7 +13,7 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>© {year} solana memecoin wiki</p>
+        <p>© {year} solana memecoin wiki — created by Broken Halo Studios</p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
