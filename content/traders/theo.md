@@ -114,4 +114,3 @@ See [[playbooks/theo-style]] for full operational guide.
 - [[traders/jijo]]
 - [[traders/cented]]
 - [[frameworks/farmer-detection]]
-- [[traders/_Template_Trader_Study]]

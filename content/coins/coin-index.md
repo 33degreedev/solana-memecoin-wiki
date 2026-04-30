@@ -38,7 +38,7 @@ Every coin studied in this wiki. One row per coin. Click the case study for full
 
 ## How to Add a New Coin
 
-1. Create `coins/[Token_Name]_Case_Study.md` using [[coins/_Template_Coin_Study]]
+1. Create `coins/[token-name].md` using the coin study template in Obsidian
 2. Add a row to the table above
 3. Add any new signal patterns to [[patterns/winner-checklist]], [[patterns/narrative-triggers]], or [[patterns/volume-fingerprints]]
 
@@ -46,7 +46,6 @@ Every coin studied in this wiki. One row per coin. Click the case study for full
 
 ## Related Pages
 
-- [[coins/_Template_Coin_Study]]
 - [[patterns/winner-checklist]]
 - [[patterns/narrative-triggers]]
 - [[patterns/migration-signals]]

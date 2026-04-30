@@ -87,4 +87,3 @@ The daily win rate (47.4%) is realistic. The jump to 94.6% monthly is the red fl
 - [[frameworks/farmer-detection]]
 - [[traders/theo]]
 - [[traders/jijo]]
-- [[traders/_Template_Trader_Study]]
