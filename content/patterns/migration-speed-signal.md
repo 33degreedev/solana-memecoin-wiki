@@ -1,4 +1,5 @@
 ---
+title: "Migration Speed Signal — How Fast Fills = How Serious the Demand"
 name: Migration Speed Signal — How Fast Fills = How Serious the Demand
 type: pattern
 tags: [pattern, signal]

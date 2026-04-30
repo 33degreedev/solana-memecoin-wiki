@@ -1,4 +1,5 @@
 ---
+title: "Hard Failure Post-Mortem — April 2026"
 name: Hard Failure Post-Mortem — April 2026
 description: Loser case study on all 16 hard failures from the Apr 27-28 session. Validates Winner Checklist thresholds from the failure side and identifies filterable patterns.
 type: analysis

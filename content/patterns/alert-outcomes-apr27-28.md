@@ -1,4 +1,5 @@
 ---
+title: "Alert Outcome Analysis — April 27–28, 2026"
 name: Alert Outcome Analysis — April 27–28, 2026
 description: Full post-mortem on 31 migration alerts fired by the detector. Win rate by tier, pattern analysis, and system improvement proposals based on confirmed ATH data.
 type: analysis

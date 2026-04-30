@@ -1,4 +1,5 @@
 ---
+title: "HOME — Solana Is Home (Apr 24, 2026)"
 name: HOME — Solana Is Home (Apr 24, 2026)
 description: Breakdown of the HOME token EXTREME migration. @solana official tweet catalyst, 17-second BC fill, 18,802 SOL raised, west + jijo in BC.
 type: case_study

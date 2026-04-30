@@ -1,4 +1,5 @@
 ---
+title: "Migration Detector — How It Works"
 name: Migration Detector — How It Works
 description: Full technical breakdown of the bot's monitoring system, detection paths, tier thresholds, and known gaps. Includes the Make A Wish missed-alert investigation (Apr 29, 2026).
 type: framework

@@ -1,4 +1,5 @@
 ---
+title: "Vamping Framework"
 name: Vamping Framework
 type: pattern
 tags: [pattern, signal]

@@ -1,4 +1,5 @@
 ---
+title: "Volume Fingerprints — Pattern Library"
 name: Volume Fingerprints — Pattern Library
 type: pattern
 tags: [pattern, signal]

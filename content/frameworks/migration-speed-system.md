@@ -1,4 +1,5 @@
 ---
+title: "Migration Speed Detector System"
 name: Migration Speed Detector System
 type: framework
 tags: [framework, system-design]

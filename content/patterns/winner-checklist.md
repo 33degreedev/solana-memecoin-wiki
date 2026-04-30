@@ -1,4 +1,5 @@
 ---
+title: "Winner Checklist — Go / No-Go Decision Framework"
 name: Winner Checklist — Go / No-Go Decision Framework
 type: pattern
 tags: [pattern, signal]

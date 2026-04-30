@@ -1,4 +1,5 @@
 ---
+title: "Jijo — Trader Profile"
 name: Jijo — Trader Profile
 type: trader-profile
 tags: [trader, wallet-analysis]

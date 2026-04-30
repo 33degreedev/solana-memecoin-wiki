@@ -1,4 +1,5 @@
 ---
+title: "Theo — Trader Profile"
 name: Theo — Trader Profile
 type: trader-profile
 tags: [trader, wallet-analysis]

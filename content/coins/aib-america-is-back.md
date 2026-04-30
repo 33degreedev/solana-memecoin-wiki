@@ -1,4 +1,5 @@
 ---
+title: "AIB (America Is Back) — Case Study"
 name: AIB (America Is Back) — Case Study
 type: case-study
 tags: [case-study, memecoin]

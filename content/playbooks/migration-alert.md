@@ -1,4 +1,5 @@
 ---
+title: "Migration Alert Playbook — How to Trade pumpAMM Graduations"
 name: Migration Alert Playbook — How to Trade pumpAMM Graduations
 type: playbook
 tags: [playbook, strategy]

@@ -1,4 +1,5 @@
 ---
+title: "Narrative Trade Playbook — How to Trade Narrative Coins"
 name: Narrative Trade Playbook — How to Trade Narrative Coins
 type: playbook
 tags: [playbook, strategy]

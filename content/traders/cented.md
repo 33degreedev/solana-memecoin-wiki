@@ -1,4 +1,5 @@
 ---
+title: "Cented — Trader Profile"
 name: Cented — Trader Profile
 type: trader-profile
 tags: [trader, wallet-analysis]

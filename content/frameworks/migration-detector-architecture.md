@@ -1,4 +1,5 @@
 ---
+title: "Migration Speed Detector — Canonical Architecture"
 name: Migration Speed Detector — Canonical Architecture
 type: framework
 tags: [framework, system-design]

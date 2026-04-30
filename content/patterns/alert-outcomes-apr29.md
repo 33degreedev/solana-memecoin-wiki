@@ -1,4 +1,5 @@
 ---
+title: "Alert Outcome Analysis — April 29, 2026"
 name: Alert Outcome Analysis — April 29, 2026
 description: Full post-mortem on 26 migration alerts fired by the VPS-deployed detector on Apr 29. Win rate by tier, trader leaderboard, pattern analysis, and P&L simulations.
 type: analysis

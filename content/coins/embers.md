@@ -1,4 +1,5 @@
 ---
+title: "Embers — Case Study"
 name: Embers — Case Study
 type: case-study
 tags: [case-study, memecoin]

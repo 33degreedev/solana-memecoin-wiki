@@ -1,4 +1,5 @@
 ---
+title: "Migration Speed Detector — Implementation Checklist"
 name: Migration Speed Detector — Implementation Checklist
 type: framework
 tags: [framework, system-design]

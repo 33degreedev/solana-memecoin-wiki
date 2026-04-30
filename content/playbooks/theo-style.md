@@ -1,4 +1,5 @@
 ---
+title: "Theo Style Playbook — How to Trade Like Theo"
 name: Theo Style Playbook — How to Trade Like Theo
 type: playbook
 tags: [playbook, strategy]

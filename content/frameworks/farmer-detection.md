@@ -1,4 +1,5 @@
 ---
+title: "Farmer Detection Framework"
 name: Farmer Detection Framework
 type: framework
 tags: [framework, system-design]

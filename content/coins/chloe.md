@@ -1,4 +1,5 @@
 ---
+title: "Chloe — Case Study"
 name: Chloe — Case Study
 type: case-study
 tags: [case-study, memecoin]

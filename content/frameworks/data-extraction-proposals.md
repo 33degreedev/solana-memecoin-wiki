@@ -1,4 +1,5 @@
 ---
+title: "Data Extraction Proposals: Reddit & X for Quality Wallet Discovery"
 name: "Data Extraction Proposals: Reddit & X for Quality Wallet Discovery"
 type: framework
 tags: [framework, system-design]

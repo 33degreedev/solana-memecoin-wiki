@@ -1,4 +1,5 @@
 ---
+title: "Position Sizing and Volume Efficiency"
 name: Position Sizing and Volume Efficiency
 type: framework
 tags: [framework, system-design]

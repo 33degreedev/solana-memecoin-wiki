@@ -1,4 +1,5 @@
 ---
+title: "Migration Signals — Pattern Library"
 name: Migration Signals — Pattern Library
 type: pattern
 tags: [pattern, signal]

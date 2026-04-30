@@ -1,4 +1,5 @@
 ---
+title: "Narrative Triggers — Pattern Library"
 name: Narrative Triggers — Pattern Library
 type: pattern
 tags: [pattern, signal]

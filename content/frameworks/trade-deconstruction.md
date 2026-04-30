@@ -1,4 +1,5 @@
 ---
+title: "Trade Deconstruction Framework: Learn to Fish, Not Copy"
 name: "Trade Deconstruction Framework: Learn to Fish, Not Copy"
 type: framework
 tags: [framework, system-design]

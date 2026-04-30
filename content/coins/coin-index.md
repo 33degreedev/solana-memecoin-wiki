@@ -1,4 +1,5 @@
 ---
+title: "Coin Index — Master Study Log"
 name: Coin Index — Master Study Log
 type: case-study
 tags: [case-study, memecoin]
