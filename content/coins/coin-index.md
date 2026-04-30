@@ -24,7 +24,7 @@ Every coin studied in this wiki. One row per coin. Click the case study for full
 
 ## Signal Scorecard (Patterns Across Coins)
 
-> Needs 10+ coins minimum before patterns are reliable. Single entry is baseline only.
+> This scorecard grows as more coins are studied — patterns emerge at 10+ entries. Check back as new case studies are added.
 
 | Signal | embers | Pattern |
 |--------|--------|---------|
