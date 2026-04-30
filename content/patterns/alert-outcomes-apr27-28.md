@@ -1,17 +1,17 @@
 ---
-name: Alert Outcome Analysis — April 2026
+name: Alert Outcome Analysis — April 27–28, 2026
 description: Full post-mortem on 31 migration alerts fired by the detector. Win rate by tier, pattern analysis, and system improvement proposals based on confirmed ATH data.
 type: analysis
 status: complete
 tags: [alert-quality, win-rate, patterns, system-improvement, outcome-tracking]
 ---
 
-# Alert Outcome Analysis — April 2026
+# Alert Outcome Analysis — April 27–28, 2026
 
-**Period:** Apr 27–28, 2026  
-**Total alerts:** 31 (1 removed — butthole, false alert, dev self-launch)  
-**2x definition:** ATH market cap > $70K post-migration  
-**Data sources:** Birdeye OHLCV, DexScreener, manual verification  
+**Period:** Apr 27–28, 2026
+**Total alerts:** 31 (1 removed — butthole, false alert, dev self-launch)
+**2x definition:** ATH market cap > $70K post-migration
+**Data sources:** Birdeye OHLCV, DexScreener, manual verification
 
 ---
 
@@ -77,7 +77,7 @@ These tokens attract bot volume during the BC fill (hence known traders triggeri
 
 ### Pattern 2 — EXTREME tier is mostly bot battles that immediately dump
 
-10 EXTREME alerts. 3 winners. The 7 losers all peaked within $3K of migration MC ($33–38K) — meaning they pumped at launch, never had post-migration momentum, and dumped immediately. The EXTREME fill speed reflects bot competition for supply, not market demand for the token. 
+10 EXTREME alerts. 3 winners. The 7 losers all peaked within $3K of migration MC ($33–38K) — meaning they pumped at launch, never had post-migration momentum, and dumped immediately. The EXTREME fill speed reflects bot competition for supply, not market demand for the token.
 
 The 3 EXTREME winners all had distinguishable narratives: Vesting (part of a "vest/invest" meta cluster), 1 billion speedrun (meme with clear identity), Dwayne (celebrity tie-in). The losers had either no narrative or oversaturated names.
 
@@ -87,7 +87,7 @@ The 3 EXTREME winners all had distinguishable narratives: Vesting (part of a "ve
 
 ### Pattern 3 — The "vest" narrative cluster
 
-Three tokens launched in rapid succession (~19:40 PT): Vesting (10s, ✅ $210K), Dog In Vest (5s, ❌), LOCKED IN (14s, ❌ $56K). This was a meta-cluster — one name inspired copies. 
+Three tokens launched in rapid succession (~19:40 PT): Vesting (10s, ✅ $210K), Dog In Vest (5s, ❌), LOCKED IN (14s, ❌ $56K). This was a meta-cluster — one name inspired copies.
 
 Vesting won because it was first. Dog In Vest and LOCKED IN were copies riding the same narrative. Only the original captured the full momentum. The copies had BC buyers (known traders entered all three) but the market only sustained one version.
 
@@ -199,7 +199,7 @@ Currently there's no feedback loop. The bot fires alerts but never learns whethe
 - Hard failures with no confirmed ATH estimated at $33–35K (never meaningfully left migration MC)
 - SCAM token included as if the bot caught it — it was designed to, the Telegram bug blocked delivery
 
-**Total trades:** 32 (31 alerted + 1 missed)  
+**Total trades:** 32 (31 alerted + 1 missed)
 **Total deployed:** 3.2 SOL
 
 ---
@@ -309,6 +309,260 @@ The SCAM miss is the painful one. A single Telegram URL bug converted a 485x tra
 
 ---
 
+## P&L Simulation — 2x Take-Profit vs Sell at ATH
+
+**Scenario:** What if the bot auto-sold every position the moment it hit 2x (i.e., token MC reached $66K — exactly 2x the $33K migration entry)?
+
+**Rules:**
+- Tokens that reach $66K MC → sell at 2x → 0.2 SOL returned on 0.1 SOL entry
+- Tokens that never reach $66K → sell at ATH (same as base simulation)
+- Same 32 trades, same 0.1 SOL position size
+
+---
+
+### Winners — capped at 2x
+
+All 10 winners had ATH above $66K so all would have triggered the 2x sell.
+
+| Token | Peak MC | ATH Mult | 2x TP Return | Left on Table |
+|---|---|---|---|---|
+| Vesting | $307K | 9.30x | 0.200 SOL | **0.730 SOL lost** |
+| Justice For Luca | $230K | 6.97x | 0.200 SOL | 0.497 SOL lost |
+| Bork | $186K | 5.64x | 0.200 SOL | 0.364 SOL lost |
+| non profit coin | $162K | 4.91x | 0.200 SOL | 0.291 SOL lost |
+| Michael Jackson Chimpanzee | $128K | 3.88x | 0.200 SOL | 0.188 SOL lost |
+| chetgpt | $100K | 3.03x | 0.200 SOL | 0.103 SOL lost |
+| werld coin | $82K | 2.48x | 0.200 SOL | 0.048 SOL lost |
+| 1 billion speedrun | $70K | 2.12x | 0.200 SOL | 0.012 SOL lost |
+| Dwayne | $68K | 2.06x | 0.200 SOL | 0.006 SOL lost |
+| Judge Network | $67K | 2.03x | 0.200 SOL | 0.003 SOL lost |
+| **Subtotal** | | | **2.000 SOL** | **2.242 SOL lost** |
+
+### Near-Misses — unchanged (ATH never reached $66K)
+
+| Token | Peak MC | Return | P&L |
+|---|---|---|---|
+| open asshole | $65K | 0.197 SOL | +0.097 SOL |
+| MurderGPT | $61K | 0.185 SOL | +0.085 SOL |
+| LOCKED IN | $56K | 0.170 SOL | +0.070 SOL |
+| MolechGPT | $54K | 0.164 SOL | +0.064 SOL |
+| Elon Musk Must Win | $54K | 0.164 SOL | +0.064 SOL |
+| **Subtotal** | | **0.880 SOL** | **+0.380 SOL** |
+
+### Hard Failures — unchanged
+
+1.687 SOL returned, +0.087 SOL profit (same — never approached 2x)
+
+### SCAM — capped at 2x
+
+| Token | Peak MC | ATH Return | 2x TP Return | Lost |
+|---|---|---|---|---|
+| SCAM | $16M (485x) | 48.485 SOL | 0.200 SOL | **48.285 SOL** |
+
+---
+
+### Full Comparison
+
+| Scenario | Trades | Deployed | Returned | P&L | ROI |
+|---|---|---|---|---|---|
+| **ATH exit (31 trades)** | 31 | 3.1 SOL | 6.515 SOL | +3.415 SOL | **+110%** |
+| **2x take-profit (31 trades)** | 31 | 3.1 SOL | 4.567 SOL | +1.467 SOL | **+47%** |
+| **ATH exit (32 w/ SCAM)** | 32 | 3.2 SOL | 55.000 SOL | +51.800 SOL | **+1,619%** |
+| **2x take-profit (32 w/ SCAM)** | 32 | 3.2 SOL | 4.767 SOL | +1.567 SOL | **+49%** |
+
+---
+
+### What This Tells Us
+
+**2x TP underperforms ATH by 63% on normal trades and by 97% including SCAM.**
+
+The damage is concentrated in 3 trades: Vesting (9.3x), Justice For Luca (6.97x), and Bork (5.64x) — together they account for 1.891 SOL of the 1.948 SOL difference. A 2x take-profit would have exited all three at $66K and missed everything above.
+
+The SCAM comparison is extreme — 2x TP captures 0.2 SOL on a 485x trade. A fixed take-profit turns a life-changing trade into a rounding error.
+
+**However, ATH exit is theoretical.** Nobody sells at the exact top. A realistic 2x TP is actually executable — the bot can place a limit order or monitor MC and auto-sell. The ATH numbers assume perfect timing which doesn't exist in practice.
+
+**The real answer:** a tiered exit is better than either extreme — take 50% off at 2x, let 50% ride with a trailing stop. That captures the guaranteed double on every winner while keeping exposure on the outliers that go to 5–10x.
+
+---
+
+## P&L Simulation — Tiered Exit (Suggested Strategy)
+
+**Rules:**
+- Entry: $33K MC, 0.1 SOL per trade
+- TP1: sell **50%** at 2x ($66K MC) → 0.05 SOL slice exits at 2x
+- TP2: sell **30%** at 3x ($99K MC) → 0.03 SOL slice exits at 3x
+- TP3: sell **remaining 20%** at trailing stop −20% from peak → 0.02 SOL slice exits at peak × 0.80
+- For tokens that never hit 2x: trailing stop fires on full position at peak × 0.80
+
+---
+
+### Winners — Hits 3x+ (6 tokens, TP1 + TP2 + TP3 all fire)
+
+| Token | Peak | TP1 (50%@2x) | TP2 (30%@3x) | TP3 (20%@peak×0.8) | Total | P&L |
+|---|---|---|---|---|---|---|
+| Vesting | 9.30x | 0.100 SOL | 0.090 SOL | 0.149 SOL | **0.339 SOL** | +0.239 SOL |
+| Justice For Luca | 6.97x | 0.100 SOL | 0.090 SOL | 0.112 SOL | **0.302 SOL** | +0.202 SOL |
+| Bork | 5.64x | 0.100 SOL | 0.090 SOL | 0.090 SOL | **0.280 SOL** | +0.180 SOL |
+| non profit coin | 4.91x | 0.100 SOL | 0.090 SOL | 0.079 SOL | **0.269 SOL** | +0.169 SOL |
+| MJ Chimpanzee | 3.88x | 0.100 SOL | 0.090 SOL | 0.062 SOL | **0.252 SOL** | +0.152 SOL |
+| chetgpt | 3.03x | 0.100 SOL | 0.090 SOL | 0.048 SOL | **0.238 SOL** | +0.138 SOL |
+
+### Winners — Hits 2x but not 3x (4 tokens, TP1 fires, rest trail)
+
+*Remaining 50% (TP2+TP3 combined) exits at peak × 0.80*
+
+| Token | Peak | TP1 (50%@2x) | Remaining 50% @trailing | Total | P&L |
+|---|---|---|---|---|---|
+| werld coin | 2.48x | 0.100 SOL | 0.099 SOL | **0.199 SOL** | +0.099 SOL |
+| 1 billion speedrun | 2.12x | 0.100 SOL | 0.085 SOL | **0.185 SOL** | +0.085 SOL |
+| Dwayne | 2.06x | 0.100 SOL | 0.082 SOL | **0.182 SOL** | +0.082 SOL |
+| Judge Network | 2.03x | 0.100 SOL | 0.081 SOL | **0.181 SOL** | +0.081 SOL |
+
+**Winners subtotal: 2.427 SOL returned on 1.0 SOL — P&L: +1.427 SOL**
+
+---
+
+### Near-Misses — No TP fires, full position exits at trailing stop (peak × 0.80)
+
+| Token | Peak | Trailing Exit | Return | P&L |
+|---|---|---|---|---|
+| open asshole | 1.97x | 1.576x | 0.158 SOL | +0.058 SOL |
+| MurderGPT | 1.85x | 1.480x | 0.148 SOL | +0.048 SOL |
+| LOCKED IN | 1.70x | 1.360x | 0.136 SOL | +0.036 SOL |
+| MolechGPT | 1.64x | 1.312x | 0.131 SOL | +0.031 SOL |
+| Elon Musk Must Win | 1.64x | 1.312x | 0.131 SOL | +0.031 SOL |
+
+**Near-misses subtotal: 0.704 SOL returned on 0.5 SOL — P&L: +0.204 SOL**
+
+---
+
+### Hard Failures — Full position exits at trailing stop (peak × 0.80)
+
+| Token | Peak | Trailing Exit | Return | P&L |
+|---|---|---|---|---|
+| Scams Pump the Hardest | 1.15x | 0.920x | 0.092 SOL | −0.008 SOL |
+| Scams Pump the Hardest #2 | 1.09x | 0.872x | 0.087 SOL | −0.013 SOL |
+| 13 tokens @1.06x | 1.06x | 0.848x | 0.085 SOL ×13 = 1.105 SOL | −0.078 SOL total |
+| Israeli shekel | 1.03x | 0.824x | 0.082 SOL | −0.018 SOL |
+| Scamcoin | 1.00x | 0.800x | 0.080 SOL | −0.020 SOL |
+| Sam Snakeman | 1.00x | 0.800x | 0.080 SOL | −0.020 SOL |
+
+**Hard failures subtotal: 1.526 SOL returned on 1.6 SOL — P&L: −0.074 SOL**
+
+---
+
+### SCAM — Tiered exit on 485x
+
+| Slice | Size | Exit | Return |
+|---|---|---|---|
+| TP1 (50%) | 0.05 SOL | 2x | 0.100 SOL |
+| TP2 (30%) | 0.03 SOL | 3x | 0.090 SOL |
+| TP3 trailing (20%) | 0.02 SOL | 485x × 0.80 = 388x | **7.760 SOL** |
+| **Total** | 0.1 SOL | | **7.950 SOL** |
+
+vs ATH simulation: 48.485 SOL. The trailing stop fires at 388x instead of the 485x peak — still captures 7.76 SOL on the 20% slice.
+
+---
+
+### Full Comparison — All Three Strategies
+
+| Strategy | 31 Trades | Deployed | Returned | P&L | ROI |
+|---|---|---|---|---|---|
+| ATH exit | 31 | 3.1 SOL | 6.515 SOL | +3.415 SOL | **+110%** |
+| 2x take-profit | 31 | 3.1 SOL | 4.567 SOL | +1.467 SOL | **+47%** |
+| **Tiered exit** | 31 | 3.1 SOL | **4.657 SOL** | **+1.557 SOL** | **+50%** |
+
+| Strategy | 32 Trades (w/ SCAM) | Deployed | Returned | P&L | ROI |
+|---|---|---|---|---|---|
+| ATH exit | 32 | 3.2 SOL | 55.000 SOL | +51.800 SOL | **+1,619%** |
+| 2x take-profit | 32 | 3.2 SOL | 4.767 SOL | +1.567 SOL | **+49%** |
+| **Tiered exit** | 32 | 3.2 SOL | **12.607 SOL** | **+9.407 SOL** | **+294%** |
+
+---
+
+### What the Math Tells Us
+
+On normal trades (no SCAM), tiered barely beats pure 2x TP (+50% vs +47%) — the difference is the near-miss and failure trailing stops recovering more than a hard -20% exit would. Both are far below ATH because ATH assumes perfect top-tick execution which doesn't exist in practice.
+
+On SCAM (485x), the gap is massive: tiered returns 7.95 SOL vs 0.20 SOL for pure 2x TP. The 20% trailing slice is what makes outliers worth holding — a 388x exit on a 20% position returns more than a 2x exit on the full position.
+
+**The tiered structure solves the core tension:** lock in guaranteed profit on every winner at 2x, capture mid-range runners at 3x, and stay exposed on outliers via the trailing slice. It's also fully executable — TP1 and TP2 are limit orders, TP3 is a trailing stop. No manual decisions required once the trade is open.
+
+---
+
+## P&L Simulation — Worst Case (Hard Failures + Near-Misses → $0)
+
+**Scenario:** Every trade that didn't win goes to zero. No recovery, no stop loss catch, no trailing exit — full rug on all 21 non-winners. Tests how each strategy holds up when losers are total losses.
+
+**Winners unchanged. Losers return 0 SOL.**
+
+---
+
+### 31 Trades — No SCAM
+
+| Category | Trades | Deployed | Returned | P&L |
+|---|---|---|---|---|
+| Winners | 10 | 1.0 SOL | — | — |
+| Near-misses | 5 | 0.5 SOL | **0 SOL** | **−0.500 SOL** |
+| Hard failures | 16 | 1.6 SOL | **0 SOL** | **−1.600 SOL** |
+| Total losses | 21 | 2.1 SOL | 0 SOL | −2.100 SOL |
+
+| Strategy | Winners Return | Total Return | P&L | ROI |
+|---|---|---|---|---|
+| ATH exit | 3.948 SOL | 3.948 SOL | **+0.848 SOL** | **+27%** |
+| 2x take-profit | 2.000 SOL | 2.000 SOL | **−1.100 SOL** | **−35%** |
+| **Tiered exit** | 2.427 SOL | 2.427 SOL | **−0.673 SOL** | **−22%** |
+
+### 32 Trades — With SCAM
+
+| Strategy | Winners | SCAM | Losses | Total | P&L | ROI |
+|---|---|---|---|---|---|---|
+| ATH exit | 3.948 SOL | 48.485 SOL | 0 SOL | 52.433 SOL | **+49.233 SOL** | **+1,538%** |
+| 2x take-profit | 2.000 SOL | 0.200 SOL | 0 SOL | 2.200 SOL | **−1.000 SOL** | **−31%** |
+| **Tiered exit** | 2.427 SOL | 7.950 SOL | 0 SOL | 10.377 SOL | **+7.177 SOL** | **+224%** |
+
+---
+
+### What This Reveals
+
+**2x TP goes negative in the worst case.** −35% without SCAM, −31% even with it. Capping all winners at 2x while taking full losses on 21 trades is a losing book — the wins don't cover the losses.
+
+**Tiered is also negative without SCAM (−22%)** but recovers dramatically with SCAM (+224%) because the 20% trailing slice turns the 485x into 7.95 SOL. Pure 2x TP only gets 0.20 SOL from SCAM regardless of how big it goes.
+
+**ATH holds up best (+27% even in worst case)** because the higher per-winner returns (avg 3.95x vs 2.0x for 2x TP) generate enough to absorb 21 total losses. Still theoretical — you can't sell at ATH.
+
+**The critical takeaway:** this scenario is exactly why the stop loss matters. The tiered strategy includes a trailing stop that catches failures at peak × 0.80 instead of zero. In the realistic tiered simulation that returned +50% ROI, hard failures recovered to ~0.85x and near-misses to ~1.4x — neither went to zero. This scenario shows what happens if you skip the stop loss entirely and let everything ride to the bottom. **Don't skip the stop loss.**
+
+---
+
+### Synopsis
+
+The worst-case scenario stress-tests every strategy against total capital loss on 21 of 31 trades. The results are unambiguous.
+
+**2x take-profit breaks.** It's the only strategy that loses money even when a 485x trade is in the book (−31%). Capping winners at 2x while absorbing full losses on losers produces a losing book regardless of outliers. The math doesn't work: 10 winners at 2x return 2.0 SOL, 21 losers at zero cost 2.1 SOL. You're underwater before SCAM even enters the equation.
+
+**Tiered survives the outlier, not the grind.** Without SCAM, tiered is negative (−22%). The stop loss is what separates the realistic tiered simulation (+50%) from the worst case — the trailing stop catches losers at ~0.85x instead of zero, which is the difference between a +1.5 SOL book and a −0.7 SOL book. The 20% trailing slice is what keeps the strategy alive on outliers: SCAM alone returns 7.95 SOL under tiered vs 0.20 SOL under 2x TP.
+
+**ATH holds up best in worst case (+27%)** because its higher per-winner returns (avg 3.95x) generate enough to absorb 21 full losses. This confirms that holding runners matters more than protecting against losers — the losers are nearly breakeven in practice anyway.
+
+**The stop loss is the single most important variable in this dataset.** It's not about which take-profit strategy you use — it's about not going to zero on the 68% of trades that don't win. A trailing stop at −20% from peak transforms worst-case losers from 0 to 0.85x, which is the difference between a losing and winning book.
+
+---
+
+### All Simulations — Master Comparison
+
+| Strategy | 31 Trades (normal) | ROI | 32 Trades (w/ SCAM) | ROI |
+|---|---|---|---|---|
+| ATH exit | +3.415 SOL | +110% | +51.800 SOL | +1,619% |
+| Tiered exit | +1.557 SOL | +50% | +9.407 SOL | +294% |
+| 2x take-profit | +1.467 SOL | +47% | +1.567 SOL | +49% |
+| ATH, worst case | +0.848 SOL | +27% | +49.233 SOL | +1,538% |
+| **Tiered, worst case** | **−0.673 SOL** | **−22%** | **+7.177 SOL** | **+224%** |
+| **2x TP, worst case** | **−1.100 SOL** | **−35%** | **−1.000 SOL** | **−31%** |
+
+---
+
 ## Trader Leaderboard — April 2026
 
 **Scoring:** 1 point per coin bought in bonding curve that hit $70K+ ATH post-migration.
@@ -393,8 +647,8 @@ Based on this session, here's how to weight traders when reading an alert:
 
 ## Related
 
-- [[coins/SVE_Sam_Vs_Elon_Apr27_2026]] — STALLED pre-watch case study
-- [[coins/HOME_Solana_Is_Home_Apr24_2026]] — EXTREME narrative case study
-- [[patterns/Migration_Speed_Signal]] — speed tier framework
-- [[patterns/Narrative_Triggers]] — what makes a token run post-migration
-- [[frameworks/Migration_Detector_Architecture]] — system architecture
+- [[coins/sve-sam-vs-elon-apr2026]] — STALLED pre-watch case study
+- [[coins/home-solana-apr2026]] — EXTREME narrative case study
+- [[patterns/migration-speed-signal]] — speed tier framework
+- [[patterns/narrative-triggers]] — what makes a token run post-migration
+- [[frameworks/migration-detector-architecture]] — system architecture
