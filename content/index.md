@@ -14,9 +14,9 @@ Token launches dissected with full timelines, on-chain data, and signal analysis
 
 - [[coins/home-solana-apr2026|HOME — Solana Is Home]] — EXTREME migration (17s), @solana catalyst, west + jijo in BC
 - [[coins/sve-sam-vs-elon-apr2026|SVE — Sam Vs. Elon]] — STALLED migration (40m), parsiix + bandit BC accumulation, BC_PRE_WATCHLIST origin story
-- [[coins/aib-america-is-back|AIB — America Is Back]] — narrative-driven EXTREME migration
-- [[coins/chloe|Chloe]] — case study
-- [[coins/embers|Embers]] — case study
+- [[coins/aib-america-is-back|AIB — America Is Back]] — Trump speech catalyst, three competing tokens, vamping case study
+- [[coins/chloe|Chloe]] — video-embedded trigger from Nikita Bier's 1M follower milestone, name spoken not typed
+- [[coins/embers|Embers]] — Sam Altman one-word tweet, 23min BC fill, 16 snipers in first 2 seconds
 - [[coins/coin-index|Coin Index]] — full token registry
 
 ---
