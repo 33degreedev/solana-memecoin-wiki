@@ -179,6 +179,38 @@ Selling every 2x hit at exactly 2x still lost 0.652 SOL if all non-2x alerts wer
 
 ---
 
+## Synopsis Lesson — TP Strategy
+
+The May 5 dataset does not support buying every alert blindly. Across all 63 alerts, fixed full-position take-profits from 1.25x to 10x were not profitable when misses were marked at current value. The edge appeared only after filtering the alert set first.
+
+The strongest practical setup from this batch was:
+
+| Rule | Setting |
+|---|---|
+| Entry filter | FAST or MODERATE tier |
+| Trader count | 1-2 traders |
+| Position size | 0.05 SOL |
+| First take-profit | Sell 50% at 2.5x |
+| Runner take-profit | Sell 25% at 5x |
+| Remainder | Hold 25% only if momentum is still alive |
+
+Simulation result for FAST/MODERATE with 1-2 traders:
+
+| Strategy | Trades | Cost | Simulated PnL |
+|---|---:|---:|---:|
+| 50% at 2.5x, 25% at 5x, 25% current/runner | 17 | 0.85 SOL | +0.339 SOL |
+
+The simpler mechanical version was also profitable:
+
+| Strategy | Trades | Cost | Simulated PnL |
+|---|---:|---:|---:|
+| FAST/MODERATE/SLOW with 1-2 traders, sell 100% at 2.5x | 22 | 1.10 SOL | +0.319 SOL |
+
+Lesson: 2x is too low to carry the losers, while 5x catches only a small number of runners. The best middle ground in this batch was 2.5x, but only after filtering by tier and trader count. For runner hunting, use 2.5x as the main take-profit and keep a smaller runner allocation for 5x+ continuation.
+
+---
+
 ## Change Log
 
 - 2026-05-06: Created new standalone analysis page from the final enriched May 5 alert CSV. Existing wiki pages were not modified.
+- 2026-05-06: Added TP strategy synopsis from threshold simulations. Main lesson: avoid buying every alert; prefer filtered FAST/MODERATE 1-2 trader entries with 2.5x as the primary take-profit.
