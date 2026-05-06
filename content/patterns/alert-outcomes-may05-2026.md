@@ -183,30 +183,37 @@ Selling every 2x hit at exactly 2x still lost 0.652 SOL if all non-2x alerts wer
 
 The May 5 dataset does not support buying every alert blindly. Across all 63 alerts, fixed full-position take-profits from 1.25x to 10x were not profitable when misses were marked at current value. The edge appeared only after filtering the alert set first.
 
-The strongest practical setup from this batch was:
+The strongest filter from this batch was FAST/MOD with 1-2 traders. That subset had 17 trades, with 0.85 SOL deployed at 0.05 SOL per alert.
+
+### Strategy Comparison — FAST/MOD + 1-2 Traders
+
+These simulations mark unsold bags at current value from the enriched CSV.
+
+| Strategy | Simulated PnL | ROI |
+|---|---:|---:|
+| 25% at 3x, 25% at 5x, 25% at 10x, 25% hold/current | +0.466 SOL | +54.8% |
+| Sell 33% at 3x, hold 67% current | +0.441 SOL | +51.9% |
+| 33% at 3x, 33% at 6x, 34% hold/current | +0.435 SOL | +51.2% |
+| 50% at 2.5x, 50% hold/current | +0.394 SOL | +46.3% |
+| Sell full at 5x | +0.381 SOL | +44.8% |
+| 50% at 3x, 50% hold/current | +0.360 SOL | +42.4% |
+
+### Preferred Operating Strategy
 
 | Rule | Setting |
 |---|---|
 | Entry filter | FAST or MODERATE tier |
 | Trader count | 1-2 traders |
 | Position size | 0.05 SOL |
-| First take-profit | Sell 50% at 2.5x |
-| Runner take-profit | Sell 25% at 5x |
-| Remainder | Hold 25% only if momentum is still alive |
+| First take-profit | Sell 25% at 3x |
+| Second take-profit | Sell 25% at 5x |
+| Runner take-profit | Sell 25% at 10x |
+| Final 25% | Trail or hold only while momentum is alive |
+| Risk control | Cut dead trades early; do not hold full bags to zero |
 
-Simulation result for FAST/MODERATE with 1-2 traders:
+Lesson: do not sell too close to 2x as the main plan. A 2x TP leaves too much upside behind and still did not cover the full unfiltered book. In this batch, the better structure was to filter hard first, then let winners breathe. First initials at 3x, not 2x, with a runner ladder at 5x and 10x.
 
-| Strategy | Trades | Cost | Simulated PnL |
-|---|---:|---:|---:|
-| 50% at 2.5x, 25% at 5x, 25% current/runner | 17 | 0.85 SOL | +0.339 SOL |
-
-The simpler mechanical version was also profitable:
-
-| Strategy | Trades | Cost | Simulated PnL |
-|---|---:|---:|---:|
-| FAST/MODERATE/SLOW with 1-2 traders, sell 100% at 2.5x | 22 | 1.10 SOL | +0.319 SOL |
-
-Lesson: 2x is too low to carry the losers, while 5x catches only a small number of runners. The best middle ground in this batch was 2.5x, but only after filtering by tier and trader count. For runner hunting, use 2.5x as the main take-profit and keep a smaller runner allocation for 5x+ continuation.
+Risk note: the stop/failed-exit simulations were directionally useful but optimistic because this CSV contains post-alert ATH and current value, not the exact intratrade low path. Treat the 3x/5x/10x ladder as the working hypothesis to test, not a final proven rule.
 
 ---
 
@@ -214,3 +221,4 @@ Lesson: 2x is too low to carry the losers, while 5x catches only a small number 
 
 - 2026-05-06: Created new standalone analysis page from the final enriched May 5 alert CSV. Existing wiki pages were not modified.
 - 2026-05-06: Added TP strategy synopsis from threshold simulations. Main lesson: avoid buying every alert; prefer filtered FAST/MODERATE 1-2 trader entries with 2.5x as the primary take-profit.
+- 2026-05-06: Updated TP strategy after broader comparison. Main lesson shifted from 2.5x primary TP to filtered FAST/MOD 1-2 trader entries with first initials at 3x and a 5x/10x runner ladder.
