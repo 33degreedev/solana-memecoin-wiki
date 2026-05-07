@@ -201,6 +201,88 @@ Medium narrative was the danger zone. It had the largest sample, but zero 5x+ an
 
 ---
 
+## Narrative Study — Winners vs Losers
+
+The winning narratives were not just "funny names." They had a clean mental handle that traders could repeat quickly: a famous person parody, a future/prophecy identity, a record-breaking animal story, AI plus Inu, or a direct personality hook like Elon. The losers usually had one of three problems: too generic, too derivative, or too abstract.
+
+### What Worked
+
+| Narrative Type | Example Token(s) | Best Result | Why It Worked |
+|---|---|---:|---|
+| Famous person parody with a tradeable twist | SELLOR / Michul Sellor | 24.15x | Michael Saylor is instantly recognizable, and "Sellor" creates a simple buy/sell joke traders can repeat. |
+| Future / prophecy character | soothsayer / The Man from the Future | 20.83x | The name creates a character and a story. It felt bigger than a ticker and paired perfectly with EXTREME migration. |
+| Animal plus achievement story | wrdog / World Record Dog | 16.87x | Dog memes are familiar, but "World Record" adds a concrete achievement frame. It is simple and visual. |
+| AI plus Inu / dog wrapper | AI / Artificial Inu | 6.69x | AI was a strong meta, and Inu made it native to meme traders. The combination was familiar but still easy to chase. |
+| Dark humor with ticker-name alignment | Alzheimers / Buy & Forget | 8.62x | The joke and trading behavior matched. "Buy & Forget" is memorable and directly tied to the name. |
+| Direct mega-personality hook | E / Elon | 8.61x | Elon remains one of the strongest crypto attention magnets. Single-letter ticker made it cleaner. |
+| Chosen-one / destiny framing | Ryder / The Chosen Inu | 6.98x | "Chosen" gives the token a hero frame. Inu keeps it inside the dog-meme lane. |
+| Programming / AI control | COMPUTA / You've Been Programmed | 6.78x | Strong phrase, tech/AI tone, and clear command-style hook. |
+| Shock/offensive phrase | Nigga, FAG | 9.24x max | Shock can move fast because it is instantly legible and polarizing, but it needs strict risk control. |
+| Kitchen-sink meme mashup | PUMP / PepeFart4BrettAsteroidInu | 5.59x | Worked as absurdity overload. This is harder to underwrite, but can run when paired with attention and a runner trader. |
+
+### The 5x+ Narrative Set
+
+| Token | Narrative Strength | Narrative Category | Max Multiple | Read |
+|---|---|---|---:|---|
+| SELLOR | Strong | Michael Saylor parody | 24.15x | Best narrative: famous person plus clean joke. |
+| soothsayer | Strong | Future/prophecy character | 20.83x | Best missed narrative: character/story should override EXTREME skip. |
+| wrdog | Strong | Animal / record story | 16.87x | Simple animal narrative with concrete achievement. |
+| FAG | Weak | Shock/internet phrase | 9.24x | Weak fundamentally, but strong shock velocity. Trade, do not marry. |
+| Alzheimers | Strong | Dark humor / memory joke | 8.62x | Dark humor worked because ticker and tagline aligned. |
+| E | Strong | Elon/personality | 8.61x | Direct personality meta plus trader stack. |
+| Ryder | Strong | Inu/chosen-one meme | 6.98x | Familiar dog lane plus destiny framing. |
+| COMPUTA | Strong | Programming/AI control | 6.78x | Tech/AI control phrase worked. |
+| AI | Strong | AI + dog/inu | 6.69x / 6.24x | Strongest repeatable category from May 5. |
+| Nigga | Weak | Shock/offensive meme | 6.29x | Shock name with fast attention. Needs quick exits. |
+| PUMP | Weak | Kitchen-sink meme mashup | 5.59x | Absurd, but caught attention with multiple meme words. |
+
+### What Failed
+
+| Losing Narrative Pattern | Examples / Categories | Why It Failed |
+|---|---|---|
+| Generic life slogans | YOLO, mindset/freedom, positive emotion, motivational/regret phrases | Too broad. Everyone understands it, but nobody has a reason to keep bidding it. |
+| Unclear names or mascots | Name/unclear, mascot/name coin, person/pet name, object/generic | No immediate story. These need an outside catalyst or elite trader stack to matter. |
+| Weak sympathy/justice framing | Justice / sympathy / character, rescue/protection, animal rescue acronym | Sympathy alone did not create degen urgency in this sample. |
+| Derivative crypto-meta without novelty | Ponzi satire, Bitcoin+Pepe, Bitcoin treasury/MSTR parody, generic fund/finance meta | Too many similar coins exist. Without a fresh angle, traders treat them as filler. |
+| Abstract sci-fi/philosophy | sci-fi acronym, philosophy/futurism, future tweet meta | Interesting words, but not concrete enough for fast meme spread. |
+| Brand/corporate references | brand/corporate meme, brand/food parody, eBay-style parody when not paired with strong trader flow | Familiarity helped some reach 2x, but did not sustain main-runner attention. |
+| Weak animal derivatives | animal rescue, generic puppies, dog philosophy, animal chill meme | Animal alone is no longer enough. The winner had "World Record"; the losers had no extra story. |
+| Medium-strength archetypes | jester, codebase, tax, lobby/policy | These were tradable to 2x-4x, but did not become 5x+ runners. Use as scalp narratives unless trader flow is exceptional. |
+
+### Key Winner vs Loser Difference
+
+Winners had at least one of these:
+
+1. **Instant recognizability:** Saylor, Elon, dog, AI, Inu.
+2. **A story phrase:** World Record Dog, The Man from the Future, You've Been Programmed.
+3. **Ticker-name alignment:** Alzheimers / Buy & Forget, SELLOR / Michul Sellor.
+4. **Degen velocity:** shock names that spread fast even if they are ugly.
+5. **A runner trader attached:** cupsery, parsiix, boomer, dv, theo, trenchman, chester, bandit, casino.
+
+Losers usually had:
+
+1. A phrase that was understandable but not sticky.
+2. A category that had been overused.
+3. No character, no famous-person hook, and no visual image.
+4. Medium narrative strength with no runner trader.
+5. A slow or stalled migration profile.
+
+### Narrative Filter to Test
+
+| Narrative Grade | Bot Handling |
+|---|---|
+| Strong + core tier | Full alert and eligible for runner plan. |
+| Strong + skipped EXTREME | Override skip; this catches the soothsayer type of miss. |
+| Strong + STALLED | Watch only; needs proven trader and continuation before entry. |
+| Medium + runner trader | Alert as scalp/watch, not full runner size. |
+| Medium + no runner trader | Lower priority or suppress. This was the biggest dead bucket. |
+| Weak shock name + fast/core tier | Allow, but tag as high-risk quick trade. |
+| Weak generic name | Suppress unless volume/trader flow is exceptional. |
+
+Final narrative lesson: **strong narratives should be allowed to override tier caution, but medium narratives should not be allowed to create false confidence.** Medium was the largest bucket and produced zero 5x+ runners. Strong was the smallest meaningful bucket and produced every 10x+.
+
+---
+
 ## Daypart Check
 
 | Daypart | Rows | 2x+ | 2x Rate | 5x+ | 10x+ | Median Multiple | Max Multiple |
@@ -282,3 +364,4 @@ Across May 5 and May 6, the dead zone was STALLED. The asymmetric zone was stron
 
 - 2026-05-07: Created combined two-day report from the May 5 and May 6 enriched alert CSVs and prior wiki pages.
 - 2026-05-07: Added trader quality review with keep, watch, soft-mute, and delete-review recommendations.
+- 2026-05-07: Added narrative study covering winning/losing narrative patterns and narrative-based bot filters.
