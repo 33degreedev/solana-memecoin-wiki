@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "none",
     },
     locale: "en-US",
-    baseUrl: "33degreedev.github.io/solana-memecoin-wiki",
+    baseUrl: "brrrdev.github.io/solana-memecoin-wiki",
     ignorePatterns: ["private", "templates", "_template-*", ".obsidian"],
     defaultDateType: "modified",
     theme: {
