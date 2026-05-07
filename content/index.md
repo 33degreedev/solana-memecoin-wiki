@@ -41,6 +41,7 @@ System architecture, detection logic, and analytical models.
 
 Recurring signals, post-mortems, and statistical analysis from live sessions.
 
+- [[patterns/two-day-alert-system-review-may05-may06-2026|Two-Day Alert System Review — May 5-6, 2026]] — combined tier settings, trader attribution, 10x+ runner analysis, and filters to test next
 - [[patterns/alert-outcomes-may06-2026|Alert Outcome Analysis — May 6, 2026]] — 45-row AFK scanner skip-rule test, including skipped-vs-alerted hit rates and EXTREME/STALLED policy notes
 - [[patterns/alert-outcomes-may05-2026|Alert Outcome Analysis — May 5, 2026]] — 63 alert batch, 36.5% 2x hit rate, narrative strength and TP lessons
 - [[patterns/alert-outcomes-apr29|Alert Outcome Analysis — Apr 29, 2026]] — 26 alerts, 38% win rate, 10 winners
