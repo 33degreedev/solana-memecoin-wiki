@@ -131,6 +131,62 @@ Use 3+ traders as a context signal, not an auto-buy. The soothsayer 3-trader row
 
 ---
 
+## Trader Quality — Keep, Mute, Delete Review
+
+This section grades traders by two-day signal quality. The main thing to avoid is deleting a trader who occasionally looks noisy but is attached to actual runners. For that reason, this report separates **mute/lower priority** from **delete review**.
+
+| Trader | Rows | 2x+ | 5x+ | 10x+ | Median Multiple | Best Multiple | Suggested Action | Reason |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| cupsery | 22 | 9 | 3 | 1 | 1.64x | 24.15x | KEEP | Best runner catcher by count; noisy volume but touched SELLOR, Ryder, Nigga. |
+| parsiix | 15 | 5 | 3 | 0 | 1.42x | 8.62x | KEEP | No 10x, but three separate 5x+ credits. Strong runner-confirmation wallet. |
+| trenchman | 7 | 4 | 2 | 1 | 2.46x | 24.15x | KEEP / PRIORITY | Highest-quality small sample: strong hit rate, SELLOR and E. |
+| boomer | 9 | 4 | 2 | 1 | 1.96x | 20.83x | KEEP / PRIORITY | Caught soothsayer and COMPUTA; useful when paired with narrative. |
+| theo | 9 | 4 | 2 | 1 | 1.96x | 20.83x | KEEP / PRIORITY | Caught soothsayer and E; strong confirmation trader. |
+| dv | 17 | 6 | 2 | 1 | 1.42x | 20.83x | KEEP, BUT FILTER | Caught soothsayer and AI, but has many sub-1.5x rows. Do not blindly follow. |
+| chester | 7 | 2 | 1 | 1 | 1.40x | 16.87x | KEEP, BUT FILTER | Caught wrdog 16.87x, but most other rows were weak. Strong narrative required. |
+| bandit | 10 | 3 | 2 | 0 | 1.80x | 6.24x | KEEP / WATCH | Two 5x+ credits, but no 10x. Good secondary runner signal. |
+| casino | 5 | 2 | 2 | 0 | 1.89x | 6.69x | KEEP / WATCH | Small sample, but both 5x+ credits were AI. Needs more breadth. |
+| decu | 3 | 2 | 1 | 0 | 3.88x | 8.62x | KEEP / WATCH | Very small sample but high quality. Do not mute yet. |
+| clukzsol | 2 | 1 | 1 | 0 | 5.40x | 9.24x | KEEP / WATCH | Caught FAG 9.24x from skipped EXTREME; sample too small to judge. |
+| errol | 7 | 2 | 1 | 0 | 1.59x | 8.61x | WATCH | Has E 8.61x but otherwise mixed. Needs narrative/trader-stack confirmation. |
+| kevnszn | 11 | 5 | 0 | 0 | 1.84x | 2.75x | SOFT MUTE FOR RUNNERS | Good 2x scalp rate, but zero 5x+. Useful for scalps, not main-runner alerts. |
+| nyhrox | 10 | 4 | 0 | 0 | 1.73x | 4.34x | SOFT MUTE FOR RUNNERS | Several tradable 2x-4x moves, but no 5x+. Lower priority for runner hunting. |
+| jijo | 7 | 2 | 0 | 0 | 1.54x | 3.06x | SOFT MUTE FOR RUNNERS | No 5x+ in this sample; keep only for secondary confirmation. |
+| leck | 4 | 2 | 0 | 0 | 2.13x | 2.97x | WATCH / SCALP ONLY | Decent small 2x sample but no runner evidence yet. |
+| radiance | 2 | 1 | 0 | 0 | 2.34x | 3.16x | WATCH | Too small to delete; no runner evidence yet. |
+| nosa1x | 2 | 1 | 0 | 0 | 2.12x | 2.38x | WATCH | Too small to delete; no runner evidence yet. |
+| limbork | 4 | 0 | 0 | 0 | 1.31x | 1.90x | DELETE REVIEW / MUTE | Four rows, zero 2x, best only 1.90x. No runner value in this sample. |
+| west | 2 | 0 | 0 | 0 | 1.21x | 1.21x | DELETE REVIEW / MUTE | Two low-output rows, no 2x. Needs proof from wider history to keep active. |
+| solscrow | 1 | 0 | 0 | 0 | 1.37x | 1.37x | INSUFFICIENT / MUTE UNTIL MORE DATA | One weak row. Not enough to delete, but not worth priority alerts. |
+
+### Who Was Mostly Noise
+
+For main-runner hunting, the noisiest two-day traders were:
+
+| Trader | Noise Read | Suggested Handling |
+|---|---|---|
+| limbork | 0 / 4 reached 2x, no 5x+, best 1.90x | Mute now; delete if wider history matches this sample. |
+| west | 0 / 2 reached 2x, both same weak MID outcome | Mute now; delete-review unless older data shows runners. |
+| solscrow | 1 weak row, no signal yet | Mute until more samples. |
+| jijo | 2 / 7 reached 2x, no 5x+, best 3.06x | Soft mute for runner alerts; allow only as secondary confirmation. |
+| kevnszn | 5 / 11 reached 2x but zero 5x+ | Do not delete; classify as scalp/no-runner signal. |
+| nyhrox | 4 / 10 reached 2x but zero 5x+ | Do not delete; classify as scalp/no-runner signal. |
+
+### Delete vs Mute Rule
+
+Use this rule before deleting a wallet from the bot:
+
+1. **Delete-review:** 4+ rows, zero 2x, zero 5x, no strong narrative runner involvement.
+2. **Soft mute:** some 2x hits but zero 5x+, especially if the trader mostly catches late or capped moves.
+3. **Keep but filter:** any trader with a 10x+ or multiple 5x+ credits, even if they have noisy rows.
+4. **Priority keep:** trader has 10x+ involvement or repeated 5x+ involvement plus strong-narrative overlap.
+
+Current delete-review candidates from this two-day sample: **limbork** and **west**.  
+Current soft-mute candidates for main-runner alerts: **kevnszn, nyhrox, jijo, solscrow**.  
+Do not delete **dv, chester, cupsery, parsiix, boomer, theo, trenchman, bandit, casino, decu, errol, clukzsol** from this sample; several are noisy, but they are attached to the actual runner set.
+
+---
+
 ## Narrative Filter
 
 | Narrative Strength | Rows | 2x+ | 2x Rate | 5x+ | 10x+ | Median Multiple | Max Multiple |
@@ -225,3 +281,4 @@ Across May 5 and May 6, the dead zone was STALLED. The asymmetric zone was stron
 ## Change Log
 
 - 2026-05-07: Created combined two-day report from the May 5 and May 6 enriched alert CSVs and prior wiki pages.
+- 2026-05-07: Added trader quality review with keep, watch, soft-mute, and delete-review recommendations.
