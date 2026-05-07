@@ -1,4 +1,5 @@
 ---
+title: "24h Report — 65 Coin Case Study — AFK Scanner Bot Signals"
 name: "24h Report — 65 Coin Case Study — AFK Scanner Bot Signals"
 type: case-study
 tags: [case-study, memecoin, afk-scanner, bot-signals, alert-quality, narrative-analysis]

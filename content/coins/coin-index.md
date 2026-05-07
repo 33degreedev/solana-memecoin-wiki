@@ -15,6 +15,7 @@ Every coin studied in this wiki. One row per coin. Click the case study for full
 
 | Token | Name | Date | Narrative Type | BC Fill Time | Outcome | Case Study |
 |-------|------|------|---------------|-------------|---------|------------|
+| Batch | 24h Report — 65 Coin Case Study — AFK Scanner Bot Signals | May 5, 2026 | Batch AFK scanner alert/narrative study | Mixed tiers | Mixed: 23/63 hit 2x+, 5/63 hit 5x+ | [[coins/24h-report-65-coin-case-study-afk-scanner-bot-signals]] |
 | C4b1rL9g | embers | Apr 23, 2026 | CEO name drop (Sam Altman) + AI mascot | 23 min | ✅ Winner | [[coins/embers]] |
 | Ggi...bonk | AIB (America Is Back) | Apr 23, 2026 | Political figure slogan (Trump) — vamping scenario | ~2 min (fast) | ✅ Winner (Bonk vamp) | [[coins/aib-america-is-back]] |
 | EjP...pump | AIB (America Is Back) | Apr 23, 2026 | Political figure slogan (Trump) — original, wrong platform | < 2 min | ❌ Dead (vamped) | [[coins/aib-america-is-back]] |

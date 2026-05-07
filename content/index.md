@@ -12,6 +12,7 @@ Research wiki for Solana memecoin trading — migration detection, wallet tracki
 
 Token launches dissected with full timelines, on-chain data, and signal analysis.
 
+- [[coins/24h-report-65-coin-case-study-afk-scanner-bot-signals|24h Report — 65 Coin Case Study — AFK Scanner Bot Signals]] — May 5 AFK scanner batch, 63 available rows, narrative strength and TP lessons
 - [[coins/home-solana-apr2026|HOME — Solana Is Home]] — EXTREME migration (17s), @solana catalyst, west + jijo in BC
 - [[coins/sve-sam-vs-elon-apr2026|SVE — Sam Vs. Elon]] — STALLED migration (40m), parsiix + bandit BC accumulation, BC_PRE_WATCHLIST origin story
 - [[coins/aib-america-is-back|AIB — America Is Back]] — Trump speech catalyst, three competing tokens, vamping case study
