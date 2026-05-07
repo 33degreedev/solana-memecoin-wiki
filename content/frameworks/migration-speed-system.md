@@ -19,19 +19,21 @@ Migration speed = time from BC pool creation → graduation ($69K MC)
 
 PRIMARY:   migration_sec → tier → determines if we proceed
 SECONDARY: known_traders in BC pool → validates demand is real
-GATE:      tier ∈ {EXTREME, VERY_FAST, FAST, MODERATE} AND traders ≥ 1
+GATE:      tier ∈ {EXTREME, VERY_FAST, FAST, MODERATE, MID, SLOW} AND traders ≥ 1
+           tier = STALLED → DISCARD (pre-watch only)
 ```
 
 ## Tier Reference
 
 | Tier       | BC Fill Time  | Entry     | Size     |
 |------------|---------------|-----------|----------|
-| EXTREME    | < 90s         | t=0       | 0.25 SOL |
+| EXTREME    | 0 – 90s       | t=0       | 0.25 SOL |
 | VERY_FAST  | 90s – 3min    | t=0       | 0.20 SOL |
 | FAST       | 3 – 5min      | t=0       | 0.15 SOL |
 | MODERATE   | 5 – 10min     | t=45s     | 0.12 SOL |
-| SLOW       | 10 – 30min    | **SKIP**  | —        |
-| STALLED    | > 30min       | **SKIP**  | —        |
+| MID        | 10 – 15min    | t=45s     | 0.08 SOL |
+| SLOW       | 15 – 20min    | t=45s     | 0.08 SOL |
+| STALLED    | 20min+        | **SKIP**  | —        |
 
 Exit: -15% stop | +5% (50%) | +10% (50%) | 60s timer
 

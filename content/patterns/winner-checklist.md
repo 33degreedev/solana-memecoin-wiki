@@ -50,9 +50,9 @@ SCORE: ___ / 6
 Check these if BC is still active. **All 3 required to proceed.**
 
 ```
-[ ] BC fill time is < 30 minutes (or < 50% filled at < 10 min)
+[ ] BC fill time is < 20 minutes (or < 50% filled at < 10 min)
     → How to check: Solscan token page, launch tx timestamp vs now
-    → embers baseline: 23 minutes
+    → embers baseline: 23 minutes (MODERATE — pre-new-boundary; would be borderline today)
 
 [ ] Dev bought at launch (visible in launch tx)
     → How to check: Solscan launch tx — first buyer = dev wallet

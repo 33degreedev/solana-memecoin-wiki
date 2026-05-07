@@ -54,7 +54,7 @@ When a migration fires, the bot calculates how long the bonding curve took to fi
 
 ### Path A — Migration-Time RPC Scan (under 10 minutes only)
 
-**How it works:** When a migration fires and there's no pre-watch hit, the bot checks the speed tier. If the tier is NOT in `SKIP_TIERS` (SLOW, STALLED), it queries the Helius RPC to fetch all bonding curve transactions, then matches them against the 24 known wallets.
+**How it works:** When a migration fires and there's no pre-watch hit, the bot checks the speed tier. If the tier is NOT in `SKIP_TIERS` (STALLED only), it queries the Helius RPC to fetch all bonding curve transactions, then matches them against the 24 known wallets.
 
 **Tier filter:**
 
@@ -64,7 +64,8 @@ When a migration fires, the bot calculates how long the bonding curve took to fi
 | VERY_FAST | ✅ Scans BC for traders |
 | FAST | ✅ Scans BC for traders |
 | MODERATE | ✅ Scans BC for traders |
-| SLOW | ❌ Skipped — `SKIP_TIERS` |
+| MID | ✅ Scans BC for traders |
+| SLOW | ✅ Scans BC for traders |
 | STALLED | ❌ Skipped — `SKIP_TIERS` |
 
 **RPC scan flow:**
@@ -105,8 +106,9 @@ When a migration fires, the bot calculates how long the bonding curve took to fi
 | Tracked wallet bought in BC before migration (any speed) | ✅ Always |
 | Migration under 10min + tracked wallet found in BC via RPC | ✅ Yes |
 | Migration under 5min + no BC traders + tracked wallet buys post-migration | ✅ Yes (Path B) |
-| Migration 10–30min (SLOW) + no pre-watch | ❌ Skipped |
-| Migration 30min+ (STALLED) + no pre-watch | ❌ Skipped |
+| Migration 10–15min (MID) + no pre-watch | ❌ Skipped (no known traders found) |
+| Migration 15–20min (SLOW) + no pre-watch | ❌ Skipped (no known traders found) |
+| Migration 20min+ (STALLED) + no pre-watch | ❌ Skipped — hard skip |
 | Migration under 10min + RPC scan hits 413 error + no pre-watch | ❌ **Silently missed** |
 
 ---
@@ -186,7 +188,7 @@ Exit config: Stop loss -15%, targets +5% (50%) and +10% (50%), 60s timer.
 
 ### 2. SLOW/STALLED Skip (By Design)
 
-SLOW and STALLED tokens are excluded from the migration-time RPC scan (`SKIP_TIERS`). They can only be caught by pre-watch. If a tracked wallet buys a SLOW BC but the WebSocket misses the trade event, the token is invisible.
+Only STALLED tokens are excluded from the migration-time RPC scan (`SKIP_TIERS`). MID and SLOW now alert when known traders are present. If a tracked wallet buys a STALLED BC but the WebSocket misses the trade event, the token is invisible — pre-watch is the only path for STALLED.
 
 **Mitigation:** The pre-watch system handles this well — Bork ($186K, STALLED) and chadhouse ($110K, SLOW) were both caught. But it's not 100% — WebSocket disconnects during the BC window create blind spots.
 

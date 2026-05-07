@@ -21,8 +21,9 @@ The time it takes to reach that point tells you:
 - **< 2 min:** Extreme demand. Bots + serious money firing simultaneously. Narrative is undeniable.
 - **2–5 min:** Strong demand. Real momentum. Narrative resonated with CT.
 - **5–10 min:** Moderate demand. Narrative is good but not viral.
-- **10–30 min:** Weak demand. Maybe narrative needs time to spread, or it's not compelling.
-- **> 30 min:** Dead. Something is wrong.
+- **10–15 min:** Weak-moderate demand (MID). Narrative propagated slowly. Needs known trader to justify entry.
+- **15–20 min:** Weak demand (SLOW). Conviction play only — filter carefully.
+- **> 20 min:** Dead (STALLED). Skip — pre-watch only path.
 
 ---
 

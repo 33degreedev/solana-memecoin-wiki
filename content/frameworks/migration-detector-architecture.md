@@ -107,14 +107,15 @@ Timer: **60 seconds** from entry, exit at market if targets not hit.
 ║  │ < 180s     → VERY_FAST                                  │  ║
 ║  │ < 300s     → FAST                                       │  ║
 ║  │ < 600s     → MODERATE                                   │  ║
-║  │ < 1800s    → SLOW     ← hard skip                       │  ║
-║  │ ≥ 1800s    → STALLED  ← hard skip                       │  ║
+║  │ < 900s     → MID                                        │  ║
+║  │ < 1200s    → SLOW                                       │  ║
+║  │ ≥ 1200s    → STALLED  ← hard skip                       │  ║
 ║  └─────────────────────┬───────────────────────────────────┘  ║
 ║                        │                                      ║
 ║  ┌─────────────────────▼───────────────────────────────────┐  ║
 ║  │ GATE 1 — Speed Filter                                   │  ║
-║  │ tier ∈ {SLOW, STALLED}? → DISCARD                       │  ║
-║  │ tier ∈ {EXTREME, VERY_FAST, FAST, MODERATE}? → continue │  ║
+║  │ tier = STALLED? → DISCARD                               │  ║
+║  │ tier ∈ {EXTREME..SLOW}? → continue                      │  ║
 ║  └─────────────────────┬───────────────────────────────────┘  ║
 ║                        │                                      ║
 ║  ┌─────────────────────▼───────────────────────────────────┐  ║
@@ -330,7 +331,8 @@ def classify_tier(migration_sec: float) -> str:
     if migration_sec < 180:   return "VERY_FAST"
     if migration_sec < 300:   return "FAST"
     if migration_sec < 600:   return "MODERATE"
-    if migration_sec < 1800:  return "SLOW"
+    if migration_sec < 900:   return "MID"
+    if migration_sec < 1200:  return "SLOW"
     return "STALLED"
 
 

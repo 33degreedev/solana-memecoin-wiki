@@ -35,7 +35,7 @@ A token matching this narrative — Sam Vs. Elon (SVE) — launched on pump.fun 
 | Token created | ~14:53:21 PT (22:53:21 UTC) |
 | Token migrated | 15:34:18 PT (23:34:18 UTC) |
 | BC duration | **40 minutes 57 seconds** |
-| Tier | **STALLED** (>30 min) |
+| Tier | **STALLED** (>20 min under current classification; 40m 57s) |
 | BC pool | `CJdSahFLQY2v...` |
 | Alert fired | ❌ No — BC_PRE_WATCHLIST not yet deployed |
 
