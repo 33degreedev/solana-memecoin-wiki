@@ -44,17 +44,15 @@ OUTPUT ───── Entry Tier
 
 | Tier       | BC Fill Time  | Alert? | Entry Timing    | Position  | Confidence    |
 |------------|---------------|--------|-----------------|-----------|---------------|
-| EXTREME    | < 90s         | ✅ YES  | t=0 at migration| 0.25 SOL  | Max           |
+| EXTREME    | 0 – 90s       | ✅ YES  | t=0 at migration| 0.25 SOL  | Max           |
 | VERY_FAST  | 90s – 3min    | ✅ YES  | t=0 at migration| 0.20 SOL  | High          |
 | FAST       | 3 – 5min      | ✅ YES  | t=0 at migration| 0.15 SOL  | Medium-High   |
 | MODERATE   | 5 – 10min     | ✅ YES  | t=45s post-mig  | 0.12 SOL  | Medium        |
-| SLOW       | 10 – 30min    | ❌ SKIP | —               | —         | Too slow      |
-| STALLED    | > 30min       | ❌ SKIP | —               | —         | Dead          |
+| MID        | 10 – 15min    | ✅ YES  | t=45s post-mig  | 0.08 SOL  | Low-Medium    |
+| SLOW       | 15 – 20min    | ✅ YES  | t=45s post-mig  | 0.08 SOL  | Low           |
+| STALLED    | 20min+        | ❌ SKIP | —               | —         | Dead          |
 
-**Key rule:** MODERATE still alerts when known traders are present (embers = 23min MODERATE, still won).
-SLOW and STALLED are hard-skips regardless of traders.
-
-> ⚠️ **Live data note (May 2026):** Alert-outcome analyses have identified a **MID tier (10–15 min)** between MODERATE and SLOW, with SLOW redefined as 15–20 min. MID produced a 33.3% 2x win rate with no 5x+ runners (n=9). The architecture above uses the original 6-tier model (10–30 min = SLOW). Consider splitting SLOW into MID (10–15 min, skip or micro-size) + SLOW (15–20 min, skip) in a future revision. See [[patterns/alert-outcomes-may05-2026]] for the live-data tier breakdown.
+**Key rule:** MODERATE and above alert on speed alone. MID and SLOW alert only when known traders are present. STALLED is a hard-skip regardless of traders — pre-watch only.
 
 Stop loss: **-15%** on all tiers.
 Exit targets: **+5% (exit 50%)** → **+10% (exit remaining 50%)**.

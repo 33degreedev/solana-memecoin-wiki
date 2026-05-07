@@ -100,12 +100,13 @@ Based on actual cases: embers (23 min, 6/6 narrative, ✅ winner), AIB (~1–2 m
 
 | Migration Time | Speed Tier | Narrative Match | Action | Position Size | Notes |
 |---|---|---|---|---|---|
-| < 90 seconds | EXTREME | 6/6 CEO drop | Enter at migration (t=0) | 0.25 SOL | Bot farms fire instantly. Proof of undeniable demand. AIB pump.fun. |
-| 90s–3m | VERY FAST | 5–6/6 strong | Enter at migration (t=0) | 0.20 SOL | Organic snipers caught it fast. Real momentum. |
-| 3–5 minutes | FAST | 4–5/6 good | Enter at migration (t=0) | 0.15 SOL | Narrative spread in CT reply chains. Still early. |
-| 5–10 minutes | MODERATE | 4/6+ | Enter post-migration (t=45s) | 0.12 SOL | Slower adoption but can still win if narrative is 4+/6. embers was 23m. |
-| 10–30 minutes | SLOW | 3–4/6 | Enter post-migration only | 0.08 SOL | Narrative took time to propagate. Wait for post-migration volume confirmation. |
-| > 30 minutes | STALLED | < 3/6 | SKIP | — | Narrative was too weak. BC filled with bots/dev farming, not organic. |
+| 0 – 90s | EXTREME | 6/6 CEO drop | Enter at migration (t=0) | 0.25 SOL | Bot farms fire instantly. Proof of undeniable demand. |
+| 90s – 3min | VERY FAST | 5–6/6 strong | Enter at migration (t=0) | 0.20 SOL | Organic snipers caught it fast. Real momentum. |
+| 3 – 5min | FAST | 4–5/6 good | Enter at migration (t=0) | 0.15 SOL | Narrative spread in CT reply chains. Still early. |
+| 5 – 10min | MODERATE | 4/6+ | Enter post-migration (t=45s) | 0.12 SOL | Slower adoption but can still win with 4+/6 narrative. |
+| 10 – 15min | MID | 3–4/6 | Enter post-migration (t=45s) | 0.08 SOL | Needs known trader presence to justify entry. |
+| 15 – 20min | SLOW | 3–4/6 | Enter post-migration only | 0.08 SOL | Filter carefully — wait for volume confirmation. |
+| 20min+ | STALLED | < 3/6 | SKIP | — | Narrative too weak. Pre-watch only. |
 
 **Critical insight:** Migration speed is a confidence multiplier, not a gate. A 23-minute BC fill with a 6/6 narrative (embers) still wins. A 90-second fill with a 3/6 narrative probably fails. Combine migration speed + narrative score for entry confidence.
 
@@ -179,17 +180,19 @@ Once migration speed is measured, use this to classify the token:
 ```python
 def classify_migration_speed(migration_seconds):
     if migration_seconds < 90:
-        return "EXTREME", "enter_at_migration", 0.25      # Max size
+        return "EXTREME", "enter_at_migration", 0.25
     elif migration_seconds < 180:
         return "VERY_FAST", "enter_at_migration", 0.20
     elif migration_seconds < 300:
         return "FAST", "enter_at_migration", 0.15
     elif migration_seconds < 600:
-        return "MODERATE", "enter_post_migration_only", 0.10
-    elif migration_seconds < 1800:
-        return "SLOW", "enter_post_migration_only", 0.08  # Wait for volume confirmation
+        return "MODERATE", "enter_post_migration_only", 0.12
+    elif migration_seconds < 900:
+        return "MID", "enter_post_migration_only", 0.08
+    elif migration_seconds < 1200:
+        return "SLOW", "enter_post_migration_only", 0.08  # 15–20 min
     else:
-        return "STALLED", "skip", 0.00                   # >30 min = narrative too weak
+        return "STALLED", "skip", 0.00                   # >20 min = skip
 ```
 
 ---

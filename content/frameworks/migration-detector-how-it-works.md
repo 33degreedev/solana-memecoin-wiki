@@ -24,14 +24,15 @@ All processing is event-driven. No polling. The bot reacts in real-time to migra
 
 When a migration fires, the bot calculates how long the bonding curve took to fill (time from token creation to migration). This determines the speed tier:
 
-| Tier | BC Fill Time | Description |
-|---|---|---|
-| EXTREME | < 90 seconds | Bot battles, massive demand |
-| VERY_FAST | < 3 minutes | Strong organic + bot demand |
-| FAST | < 5 minutes | Solid demand, some narrative |
-| MODERATE | < 10 minutes | Mixed demand |
-| SLOW | < 30 minutes | Slower fills, potential conviction plays |
-| STALLED | 30+ minutes | Long accumulation, pre-watch dependent |
+| Tier | BC Fill Time | Alert | Description |
+|---|---|---|---|
+| EXTREME | 0 – 90s | ✅ ON | Bot battles, massive demand |
+| VERY_FAST | 90s – 3min | ✅ ON | Strong organic + bot demand |
+| FAST | 3 – 5min | ✅ ON | Solid demand, some narrative |
+| MODERATE | 5 – 10min | ✅ ON | Mixed demand |
+| MID | 10 – 15min | ✅ ON | Slower fill, conviction plays |
+| SLOW | 15 – 20min | ✅ ON | Low speed, filter carefully |
+| STALLED | 20min+ | ❌ SKIP | Too slow — pre-watch only |
 
 ---
 
