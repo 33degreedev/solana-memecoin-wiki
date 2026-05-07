@@ -77,14 +77,14 @@ Migration time = Migration TX timestamp - First Buy timestamp
 ### From Screenshots (Transaction Panel)
 Looking at visible transaction timestamps:
 ```
-[Need exact Solscan txn data from your reference image]
-
 Visible ages: "5h" markers suggest these are holders, not BC progression
 The chart shows candles from 01:16 AM to 01:23 AM (UTC-7)
 = 08:16 AM to 08:23 AM UTC
 
 But this is POST-MIGRATION (chart starts on pumpAMM, not BC pool)
 ```
+
+> **TODO:** Pull exact BC pool txn data from Solscan (pool `7XQvcSPmEK1Hpq5avbcXeZb9Ac4HnP1uDrNoaUxaF1HQ`) to get the first-buy and migration timestamps. The estimate of 2–5 min below is based on volume reasoning, not direct measurement.
 
 **Action:**
 1. Go to Solscan, pool `7XQvcSPmEK1Hpq5avbcXeZb9Ac4HnP1uDrNoaUxaF1HQ` (BC pool)
@@ -179,15 +179,17 @@ Once migration speed is measured, use this to classify the token:
 ```python
 def classify_migration_speed(migration_seconds):
     if migration_seconds < 90:
-        return "EXTREME_DEMAND", "enter_at_migration", 0.25  # Max size
+        return "EXTREME", "enter_at_migration", 0.25      # Max size
     elif migration_seconds < 180:
         return "VERY_FAST", "enter_at_migration", 0.20
     elif migration_seconds < 300:
         return "FAST", "enter_at_migration", 0.15
     elif migration_seconds < 600:
         return "MODERATE", "enter_post_migration_only", 0.10
+    elif migration_seconds < 1800:
+        return "SLOW", "enter_post_migration_only", 0.08  # Wait for volume confirmation
     else:
-        return "SLOW_OR_DEAD", "skip", 0.00
+        return "STALLED", "skip", 0.00                   # >30 min = narrative too weak
 ```
 
 ---

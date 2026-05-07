@@ -57,7 +57,7 @@ Trade #1:
 │       └── (Volume spike? Whale movement? Price action?)
 │
 ├── During Trade
-│   ├── Hold time: 7 seconds
+│   ├── Hold time: 7–60 seconds (this example: 7s — a fast exit trade)
 │   ├── Price movement: +5% (peak) at T=5s
 │   ├── Volume during hold: [increasing/stable/decreasing]
 │   └── Competitor activity: [other wallets buying/selling?]

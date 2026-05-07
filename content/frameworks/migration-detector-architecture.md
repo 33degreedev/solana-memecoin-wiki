@@ -54,6 +54,8 @@ OUTPUT ───── Entry Tier
 **Key rule:** MODERATE still alerts when known traders are present (embers = 23min MODERATE, still won).
 SLOW and STALLED are hard-skips regardless of traders.
 
+> ⚠️ **Live data note (May 2026):** Alert-outcome analyses have identified a **MID tier (10–15 min)** between MODERATE and SLOW, with SLOW redefined as 15–20 min. MID produced a 33.3% 2x win rate with no 5x+ runners (n=9). The architecture above uses the original 6-tier model (10–30 min = SLOW). Consider splitting SLOW into MID (10–15 min, skip or micro-size) + SLOW (15–20 min, skip) in a future revision. See [[patterns/alert-outcomes-may05-2026]] for the live-data tier breakdown.
+
 Stop loss: **-15%** on all tiers.
 Exit targets: **+5% (exit 50%)** → **+10% (exit remaining 50%)**.
 Timer: **60 seconds** from entry, exit at market if targets not hit.

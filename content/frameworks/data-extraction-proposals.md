@@ -490,8 +490,6 @@ For each proposal completed:
 
 ### Example Wiki Page Structure
 
-markdown
-
 ```markdown
 # [Proposal Name] Analysis
 

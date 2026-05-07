@@ -5,9 +5,7 @@ description: Combined analysis of May 5 and May 6 AFK scanner outcomes, focused 
 type: analysis
 status: draft
 tags: [alert-quality, migration-speed, trader-analysis, skip-rules, main-runners, pnl-simulation]
-sources:
-  - "/Users/grip.eth/Documents/Codex/2026-05-06/files-mentioned-by-the-user-alerts/alerts_24h_2026-05-05_2340_enriched.csv"
-  - "/Users/grip.eth/Documents/Codex/2026-05-06/files-mentioned-by-the-user-alerts/alerts_24h_2026-05-06_2240_enriched.csv"
+source: "alerts_24h_2026-05-05_2340_enriched.csv + alerts_24h_2026-05-06_2240_enriched.csv (Codex 2026-05-06)"
 ---
 
 # Two-Day Alert System Review — May 5-6, 2026

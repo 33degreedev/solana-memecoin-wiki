@@ -12,7 +12,7 @@ Research wiki for Solana memecoin trading — migration detection, wallet tracki
 
 Token launches dissected with full timelines, on-chain data, and signal analysis.
 
-- [[coins/24h-report-65-coin-case-study-afk-scanner-bot-signals|24h Report — 65 Coin Case Study — AFK Scanner Bot Signals]] — May 5 AFK scanner batch, 63 available rows, narrative strength and TP lessons
+- [[coins/24h-report-65-coin-case-study-afk-scanner-bot-signals|24h Batch Report — 63 Coins]] — May 5 AFK scanner batch, 63 alert rows, narrative strength and TP lessons
 - [[coins/home-solana-apr2026|HOME — Solana Is Home]] — EXTREME migration (17s), @solana catalyst, west + jijo in BC
 - [[coins/sve-sam-vs-elon-apr2026|SVE — Sam Vs. Elon]] — STALLED migration (40m), parsiix + bandit BC accumulation, BC_PRE_WATCHLIST origin story
 - [[coins/aib-america-is-back|AIB — America Is Back]] — Trump speech catalyst, three competing tokens, vamping case study
@@ -41,7 +41,7 @@ System architecture, detection logic, and analytical models.
 
 Recurring signals, post-mortems, and statistical analysis from live sessions.
 
-- [[patterns/two-day-alert-system-review-may05-may06-2026|Two-Day Alert System Review — May 5-6, 2026]] — combined tier settings, trader attribution, 10x+ runner analysis, and filters to test next
+- [[patterns/two-day-alert-system-review-may05-may06-2026|Two-Day Alert System Review — May 5–6, 2026]] — combined tier settings, trader attribution, 10x+ runner analysis, and filters to test next
 - [[patterns/alert-outcomes-may06-2026|Alert Outcome Analysis — May 6, 2026]] — 45-row AFK scanner skip-rule test, including skipped-vs-alerted hit rates and EXTREME/STALLED policy notes
 - [[patterns/alert-outcomes-may05-2026|Alert Outcome Analysis — May 5, 2026]] — 63 alert batch, 36.5% 2x hit rate, narrative strength and TP lessons
 - [[patterns/alert-outcomes-apr29|Alert Outcome Analysis — Apr 29, 2026]] — 26 alerts, 38% win rate, 10 winners
@@ -76,12 +76,15 @@ Wallet analysis and trading style breakdowns for tracked wallets.
 
 ---
 
-## Bot Stats (Apr 29, 2026)
+## Bot Stats (May 5–6, 2026 — two-day combined)
 
 | Metric | Value |
 |---|---|
 | Tracked wallets | 24 (all Tier S) |
 | Detection paths | 3 (Pre-watch, RPC scan, Post-migration) |
-| Speed tiers | 6 (EXTREME → STALLED) |
-| Top alert traders | dv (11), parsiix (6), chester (5), theo (4) |
-| Best win rate | EXTREME 57%, parsiix 80% |
+| Speed tiers | 6 (EXTREME → STALLED) + MID emerging |
+| Alerts analysed | 108 across 2 days |
+| 2x+ hit rate | 38.9% (42/108) |
+| 5x+ hit rate | 11.1% (12/108) |
+| 10x+ main runners | 2.8% (3/108) — all from strong narratives |
+| Best tier for runners | FAST + MODERATE (all 3 main runners) |

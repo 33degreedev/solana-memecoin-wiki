@@ -2,7 +2,7 @@
 title: "SVE — Sam Vs. Elon (Apr 27, 2026)"
 name: SVE — Sam Vs. Elon (Apr 27, 2026)
 description: BC pre-watch case study. parsiix entered BC 14 min pre-migration, bandit 8 min pre-migration. STALLED tier (40m 57s) — bot missed alert because BC_PRE_WATCHLIST feature wasn't live yet. Strong post-migration run.
-type: case_study
+type: case-study
 status: complete
 tags: [STALLED, pre-migration, bc-pre-watch, narrative, legal-event, ai-narrative, missed-alert]
 ---

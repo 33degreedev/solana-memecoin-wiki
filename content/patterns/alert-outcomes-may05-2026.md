@@ -36,18 +36,18 @@ The batch had a decent number of tradable 2x opportunities, but true runners wer
 
 ## Top Post-Alert Runners
 
-| Rank | Token | Tier | Traders | Trader Names | Alert Time PT | Current MC/FDV | Post-Alert ATH MC | Max Multiple | ATH Time PT |
-|---:|---|---|---:|---|---|---:|---:|---:|---|
-| 1 | SELLOR / Michul Sellor | MODERATE | 2 | trenchman, cupsery | 2026-05-05 03:22 PM | 495K | 858K | 24.15x | 2026-05-05 06:02 PM |
-| 2 | wrdog / World Record Dog | FAST | 1 | chester | 2026-05-05 02:53 AM | 89K | 538K | 16.87x | 2026-05-05 05:30 AM |
-| 3 | Alzheimers / Buy & Forget | MODERATE | 2 | decu, parsiix | 2026-05-05 07:50 PM | 176K | 286K | 8.62x | 2026-05-05 10:27 PM |
-| 4 | AI / Artificial Inu | FAST | 1 | casino | 2026-05-05 11:50 AM | 74K | 211K | 6.69x | 2026-05-05 06:54 PM |
-| 5 | AI / Artificial Inu | FAST | 3 | dv, bandit, casino | 2026-05-05 11:50 AM | 14K | 216K | 6.24x | 2026-05-05 02:30 PM |
-| 6 | 1 / 1 min a day | SLOW | 1 | cupsery | 2026-05-05 09:40 AM | 3K | 137K | 4.66x | 2026-05-05 09:47 AM |
-| 7 | turdcoin / turdcoin | EXTREME | 1 | nyhrox | 2026-05-05 05:58 AM | 24K | 141K | 4.34x | 2026-05-05 06:01 AM |
-| 8 | LUKE / Luke Battles Cancer Fund | SLOW | 1 | parsiix | 2026-05-05 10:06 AM | 4K | 142K | 4.26x | 2026-05-05 12:02 PM |
-| 9 | LOBBYOOR / Bitcoin Policy Institute | MID | 1 | cupsery | 2026-05-05 11:02 PM | 58K | 146K | 4.07x | 2026-05-05 11:16 PM |
-| 10 | Roho / Roho | MODERATE | 1 | nyhrox | 2026-05-05 08:19 AM | 6K | 91K | 3.31x | 2026-05-05 08:41 AM |
+| Rank | Token                               | Tier     | Traders | Trader Names       | Alert Time PT       | Current MC/FDV | Post-Alert ATH MC | Max Multiple | ATH Time PT         |
+| ---: | ----------------------------------- | -------- | ------: | ------------------ | ------------------- | -------------: | ----------------: | -----------: | ------------------- |
+|    1 | SELLOR / Michul Sellor              | MODERATE |       2 | trenchman, cupsery | 2026-05-05 03:22 PM |           495K |              858K |       24.15x | 2026-05-05 06:02 PM |
+|    2 | wrdog / World Record Dog            | FAST     |       1 | chester            | 2026-05-05 02:53 AM |            89K |              538K |       16.87x | 2026-05-05 05:30 AM |
+|    3 | Alzheimers / Buy & Forget           | MODERATE |       2 | decu, parsiix      | 2026-05-05 07:50 PM |           176K |              286K |        8.62x | 2026-05-05 10:27 PM |
+|    4 | AI / Artificial Inu                 | FAST     |       1 | casino             | 2026-05-05 11:50 AM |            74K |              211K |        6.69x | 2026-05-05 06:54 PM |
+|    5 | AI / Artificial Inu                 | FAST     |       3 | dv, bandit, casino | 2026-05-05 11:50 AM |            14K |              216K |        6.24x | 2026-05-05 02:30 PM |
+|    6 | 1 / 1 min a day                     | SLOW     |       1 | cupsery            | 2026-05-05 09:40 AM |             3K |              137K |        4.66x | 2026-05-05 09:47 AM |
+|    7 | turdcoin / turdcoin                 | EXTREME  |       1 | nyhrox             | 2026-05-05 05:58 AM |            24K |              141K |        4.34x | 2026-05-05 06:01 AM |
+|    8 | LUKE / Luke Battles Cancer Fund     | SLOW     |       1 | parsiix            | 2026-05-05 10:06 AM |             4K |              142K |        4.26x | 2026-05-05 12:02 PM |
+|    9 | LOBBYOOR / Bitcoin Policy Institute | MID      |       1 | cupsery            | 2026-05-05 11:02 PM |            58K |              146K |        4.07x | 2026-05-05 11:16 PM |
+|   10 | Roho / Roho                         | MODERATE |       1 | nyhrox             | 2026-05-05 08:19 AM |             6K |               91K |        3.31x | 2026-05-05 08:41 AM |
 
 ---
 

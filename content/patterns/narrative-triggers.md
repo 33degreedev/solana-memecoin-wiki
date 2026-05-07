@@ -144,7 +144,7 @@ Score any incoming narrative on these 6 dimensions. **4+ = investigate on-chain.
 
 ---
 
-### Type 3: Credible Crypto Figure Frames the Narrative
+### Type 4: Credible Crypto Figure Frames the Narrative
 
 **What it is:** A known crypto account (50K+ followers, respected reputation) links a token address to an existing viral tweet and articulates the thesis.
 

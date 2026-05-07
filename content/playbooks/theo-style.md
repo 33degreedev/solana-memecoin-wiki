@@ -19,7 +19,7 @@ tags: [playbook, strategy]
 Theo makes money by:
 1. Finding tokens **9–25 minutes old** with a volume spike
 2. Entering with a **fixed position** (5% of capital)
-3. Holding **30–60 seconds** with a hard timer
+3. Holding **30–60 seconds** with a hard timer *(live on-chain data shows some exits at 7–10s — see [[traders/theo]] hold time note)*
 4. Exiting at **+5% (50%)** then **+10% (all)**, OR cutting at **-15%**
 5. Doing this 20–25 times per day
 

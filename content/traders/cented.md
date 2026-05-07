@@ -1,6 +1,5 @@
 ---
 title: "Cented — Trader Profile"
-name: Cented — Trader Profile
 type: trader-profile
 tags: [trader, wallet-analysis]
 ---
@@ -9,7 +8,7 @@ tags: [trader, wallet-analysis]
 
 **Data as of:** Apr 22, 2026
 **Assessment:** 🚨 LIKELY FARMER — do not copy without verification
-**Farmer detection score:** 4/5
+**Farmer detection score:** 4–5/5 (see score note in Farmer Detection section)
 
 ---
 
@@ -36,6 +35,8 @@ A 94.6% monthly win rate across 2,147 trades is statistically implausible for ma
 | Theo | 55.9% | 3,657 | ✅ Realistic |
 | Jijo | 55.3% | 713 | ✅ Realistic |
 
+> ⚠️ **Note on Jijo win rate:** The 55.3% / 713-trade figure above is the monthly KOL estimate. The 8-day axiom_trades_apr22 sample shows 68.2% (107/157). GMGN confirms 68.37%. The monthly figure likely reflects a larger sample with more variance. Use 55–68% as the realistic range; see [[traders/jijo]] for the full breakdown.
+
 The daily win rate (47.4%) is realistic. The jump to 94.6% monthly is the red flag — implies wins are being systematically selected or the edge is coming from copy traders.
 
 ---
@@ -48,9 +49,11 @@ The daily win rate (47.4%) is realistic. The jump to 94.6% monthly is the red fl
 | #1–2 leaderboard + broadcasts | 🚨 #1 daily AND monthly |
 | Daily rank collapsed monthly | ⚠️ Maintains #1 — no collapse (farming advantage) |
 | Win rate jump daily → monthly | 🚨 47.4% → 94.6% (+100% improvement) |
-| Hold time locked 5–15s only | ⚠️ Unverified — no on-chain confirmation |
+| Hold time locked 5–15s only | 🚨 10s hold time publicly broadcast (self-reported) |
 
-**Score: 4/5 → LIKELY FARMER 🚨**
+**Score: 4–5/5 → LIKELY FARMER 🚨**
+
+> ⚠️ **Score note:** The hold time flag (check #5) is based on Cented's self-reported "10s holds." If you count this as confirmed (the framework does — broadcasting hold time is itself a farmer signal), the score is 5/5. If you require on-chain verification, it's 4/5. Either way: LIKELY FARMER. See [[frameworks/farmer-detection]] case study for the 5/5 assessment.
 
 ---
 

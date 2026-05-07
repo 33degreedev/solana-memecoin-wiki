@@ -145,28 +145,9 @@ Every new coin studied should result in updating at least one threshold:
 
 ## Score History
 
-| Coin | Narrative | BC | Migration | Outcome |
-|------|-----------|----|-----------|---------|
-| embers | 6/6 | 3/3 | 5/5 | ✅ Winner |
-| Scams Pump the Hardest ×2 | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Scams And Profit 500 | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Scamcoin | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Sam Snakeman | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| OMNITRADING | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| WeLoveDicks | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Legit Coin | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| For Profit Coin | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Unfazed | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| up | 0/6 | —/3 | —/5 | ❌ Hard Failure |
-| Dog In Vest | 2/6 | —/3 | —/5 | ❌ Hard Failure (copy) |
-| OpenLie | 2/6 | —/3 | —/5 | ❌ Hard Failure |
-| Helping Hand | 1/6 | —/3 | —/5 | ❌ Hard Failure |
-| AmericanReserveModernizationAct | 1/6 | —/3 | —/5 | ❌ Hard Failure |
-| Israeli shekel | 2/6 | —/3 | —/5 | ❌ Hard Failure |
+→ Full score history (all 16 failures + embers winner): [[patterns/hard-failure-postmortem-apr2026]]
 
-*BC and Migration sections marked —/3 and —/5: Section 1 terminates evaluation, these tokens never reached the on-chain check.*
-
-→ Full failure analysis: [[patterns/hard-failure-postmortem-apr2026]]
+The complete table lives in the postmortem to keep it in one place. Summary: embers (6/6 | 3/3 | 5/5 ✅), 16 hard failures (all scored ≤ 2/6, all filtered by Section 1). 100% filter rate on failures at 4+/6 threshold.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "24h Report — 65 Coin Case Study — AFK Scanner Bot Signals"
-name: "24h Report — 65 Coin Case Study — AFK Scanner Bot Signals"
+title: "24h Report — 63 Coin Case Study — AFK Scanner Bot Signals"
+name: "24h Report — 63 Coin Case Study — AFK Scanner Bot Signals"
 type: case-study
 tags: [case-study, memecoin, afk-scanner, bot-signals, alert-quality, narrative-analysis]
 source: "/Users/grip.eth/Documents/Codex/2026-05-06/files-mentioned-by-the-user-alerts/alerts_24h_2026-05-05_2340_enriched.csv"
 ---
 
-# 24h Report — 65 Coin Case Study — AFK Scanner Bot Signals
+# 24h Report — 63 Coin Case Study — AFK Scanner Bot Signals
 
 **Token:** Batch study of AFK scanner post-migration alerts  
 **Date:** 2026-05-05 PT  
