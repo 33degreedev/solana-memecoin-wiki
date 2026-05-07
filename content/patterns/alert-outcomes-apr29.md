@@ -137,7 +137,7 @@ Compare: OpenAI Coin had 13.33 SOL from 2 traders (dv + west) and won $92K. But 
 
 ### Pattern 8 — STALLED win rate dropped (20% vs 40% on Apr 27–28)
 
-Only 1 STALLED winner (Frok, $83K) out of 5 alerts. The Apr 27–28 session's STALLED thesis was "a trader accumulating for 30 minutes has conviction." This session's STALLED losers included GremlinCoin (dv + trenchman) and agent tusk #2 (kevnszn + errol) — multi-trader STALLED alerts that still failed. **STALLED is not inherently high-quality. The pre-watch conviction thesis holds only when the traders involved have high hit rates (parsiix, dv on good narratives).**
+Only 1 STALLED winner (Frok, $83K) out of 5 alerts. The Apr 27–28 session's STALLED thesis was "a trader accumulating for 30 minutes has conviction." This session's STALLED losers included GremlinCoin (dv + trenchman) and agent tusk #2 (kevnszn + errol) — multi-trader STALLED alerts that still failed. **STALLED is not inherently high-quality. The slow-BC conviction thesis holds only when the traders involved have high hit rates (parsiix, dv on good narratives).**
 
 ---
 

@@ -98,11 +98,9 @@ Vesting won because it was first. Dog In Vest and LOCKED IN were copies riding t
 
 ### Pattern 4 — STALLED tier has the highest win rate (40%)
 
-Both STALLED winners (Bork $186K, Michael jackson Chimpanzee $128K) were BC pre-watch hits — known traders had been accumulating for 30+ minutes before migration. A slow BC fill with sustained known-trader buying is a stronger quality signal than a 5-second EXTREME fill driven entirely by bots.
+Both STALLED winners (Bork $186K, Michael jackson Chimpanzee $128K) were slow-BC conviction plays — known traders had been accumulating for 30+ minutes before migration. A slow BC fill with sustained known-trader buying is a stronger quality signal than a 5-second EXTREME fill driven entirely by bots.
 
 **A trader accumulating for 30 minutes has conviction. A bot buying in 5 seconds is just execution.**
-
-This validates the BC_PRE_WATCHLIST feature. The SVE case study (STALLED, never alerted because pre-watch wasn't deployed) was the same pattern. These are not weak alerts — they are high-conviction plays that the system was previously missing entirely.
 
 ---
 
@@ -126,7 +124,7 @@ The detector is correctly identifying when known traders are active — but bein
 
 The clearest finding is that two variables predict failure more reliably than tier or trader count: **a scam-themed name** and **being a copy of a token that already migrated**. Remove those two categories and the win rate improves significantly on the remaining pool.
 
-STALLED tier is underrated. The pre-watch hits on slow tokens represent genuine trader conviction and outperform EXTREME alerts on a win-rate basis. The system's original instinct to skip STALLED was wrong — the BC_PRE_WATCHLIST fix was the right call.
+STALLED tier is underrated. Slow-BC conviction trades outperform EXTREME alerts on a win-rate basis. High speed means high competition, not high quality.
 
 EXTREME tier is overrated. High speed means high competition, not high quality. Most EXTREME tokens are bot battles that die within minutes of migration. The winners in EXTREME had strong standalone narratives that kept buyers engaged post-migration.
 
@@ -183,7 +181,7 @@ Currently there's no feedback loop. The bot fires alerts but never learns whethe
 ## Key Takeaways
 
 1. **32% overall win rate** — 10/31 alerts resulted in 2x+
-2. **STALLED is the best tier (40%)** — pre-watch conviction trades outperform bot-speed trades
+2. **STALLED is the best tier (40%)** — slow-BC conviction trades outperform bot-speed trades
 3. **EXTREME is noisy (30%)** — speed alone doesn't predict quality
 4. **Scam-named tokens: 0% win rate** — filterable, zero false negatives
 5. **Copy tokens: 0% win rate** — duplicate name detection would clean this up
@@ -641,14 +639,13 @@ Based on this session, here's how to weight traders when reading an alert:
 | dv + any second trader | Strong consensus signal — multi-winner in both combos |
 | kevnszn in BC | Quality narrative filter — both wins had strong stories (chetgpt, Justice For Luca) |
 | 3+ traders in BC | Highest ceiling — both 3-trader alerts hit $100K+ |
-| Solo STALLED trader | Check if it's a pre-watch accumulation — Bork was dv sitting in BC for 30+ min |
+| Solo STALLED trader | Check if it's slow accumulation — Bork was dv sitting in BC for 30+ min |
 | EXTREME + 0 known traders | Bot battle — skip or size down |
 
 ---
 
 ## Related
 
-- [[coins/sve-sam-vs-elon-apr2026]] — STALLED pre-watch case study
 - [[coins/home-solana-apr2026]] — EXTREME narrative case study
 - [[patterns/migration-speed-signal]] — speed tier framework
 - [[patterns/narrative-triggers]] — what makes a token run post-migration
